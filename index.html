@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" href="style.css"/>
+    <script src="https://unpkg.com/vue@next"></script>
+    <link>
+</head>
+<body>
+
+<div id="app">
+<input type="text" v-model="addMessage"/>
+<input id="7" type="submit" value="7" v-model="seven">
+<input id="8" type="submit" value="8" v-model:height>
+<input id="9" type="submit" value="9" v-model:nine><br>
+<input id="4" type="submit" value="4" v-model:four>
+<input id="5" type="submit" value="5" v-model:five>
+<input id="6" type="submit" value="6" v-model:six><br>
+<input id="1" type="submit" value="1" v-model:one>
+<input id="2" type="submit" value="2" v-model:two>
+<input id="3" type="submit" value="3" v-model:three><br>
+<input id="0" type="submit" value="0" v-model:zero>
+<input id="+" type="submit" value="+">
+<input id="=" type="submit" value="=">
+</div>
+
+<script>
+    const vm = Vue.createApp({
+        data(){
+            return {
+                message: 'h1 - Hello Campus',
+                message2: 'h2 - Red',
+                students: ['Greg', 'Steve', 'Mati'],
+                addMessage: '',
+                H1redColor:false,
+                H2redColor: false,
+                ATM: false,
+                display: '',
+                one: 1,
+                two: 2,
+                three: 3,
+                four: 4,
+                five: 5,
+                six: 6,
+                seven: 7,
+                eight: 8,
+                nine: 9,
+                zero: 0,
+            }
+        },
+        methods:{
+            ajouterMessage(){
+                this.message2 = this.addMessage
+                this.addMessage = ''
+            },
+        }
+
+    }).mount('#app');
+</script>
+
+</body>
+</html>
